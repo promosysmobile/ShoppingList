@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentList">
+
+    <fragment
+        tools:layout="@layout/fragment_list"
+        android:id="@+id/fragmentList"
+        android:name="com.nabilla.shoppinglist.ui.FragmentList"
+        android:label="FragmentList" >
+        <action
+            android:id="@+id/action_fragmentList_to_fragmentAddItem"
+            app:destination="@id/fragmentAddItem" />
+    </fragment>
+
+    <fragment
+        tools:layout="@layout/fragment_add_item"
+        android:id="@+id/fragmentAddItem"
+        android:name="com.nabilla.shoppinglist.ui.FragmentAddItem"
+        android:label="FragmentAddItem" >
+        <action
+            android:id="@+id/action_fragmentAddItem_to_fragmentList"
+            app:destination="@id/fragmentList" />
+    </fragment>
+</navigation>
